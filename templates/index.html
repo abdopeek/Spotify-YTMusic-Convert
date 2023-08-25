@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+
+{% block main %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/index_style.css">
+{% endblock %}
+    <div class="container">
+        <main class="hero-container">
+            <section class="hero">
+                <h1 class="main-text">
+                    Convert your Spotify playlists to Youtube Music!
+                </h1>
+                <form action="/login" method="get">
+                    <button class="spotify-login">Login to Spotify</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    
+{% endblock %}

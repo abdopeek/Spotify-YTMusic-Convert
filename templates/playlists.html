@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/playlists_style.css">
+{% endblock %}
+{% block main %}
+
+<div class="playlist">
+    <div class="playlist-inner">
+        <div class="button-wrapper">
+            <form action="/convert" method="post">
+                <button class="confirmBtn" name="id" type="submit">Transfer selected playlists to Youtube Music</button>
+                </form>
+        </div>
+        {% for playlist in playlists %}
+        <div class="music">
+            <div class="music-content">
+                <div class="image-wrapper"><img src="{{ playlist['image'] }}" alt="Playlist Cover" class="image"></div>
+                <div class="right">
+                    <span class="name">
+                        {% if playlist['name']|length < 19 %}
+                            {{ playlist['name'] }}
+                        {% else %}
+                            {{ playlist['name'][:19] }}...
+                        {% endif %}
+                    </span>
+                    <span class="songs">{{ playlist['tracks'] }} tracks</span>
+                    <span class="id" hidden='hidden'>{{  playlist['id'] }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script src="/static/playlists_script.js"></script>
+
+{% endblock %}
