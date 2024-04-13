@@ -146,15 +146,16 @@ def convert():
 
     youtube = create_youtube(credentials)
     yt_playlist = create_playlist(youtube, playlist)
-    add_songs(youtube, playlist, yt_playlist)
+    result = add_songs(youtube, playlist, yt_playlist)
+    failed = [d for d in result if d.get('status') == False]
 
 
-    return 'all good'
+    return render_template('result.html', failed=failed)
 
 
 @app.route('/result')
 def displayResult():
-    pass
+    return render_template('result.html')
 
 def get_token():
     valid_token = False
@@ -241,7 +242,7 @@ def add_songs(youtube, sp_playlist, yt_playlist):
         }
         results.append(result)
 
-    return 
+    return results
 
 
 def create_playlist(youtube, sp_playlist):

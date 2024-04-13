@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/static/result_style.css">
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <img src="/static/success.svg" alt="success">
+        <h1>Success!</h1>
+        <p>Your playlists have been added to your YouTube account. Wait for 15 - 30 seconds and it should show up on the app.</p>
+        {% if failed|length > 0 %}
+            <div class="added">
+                <h3>These songs could not be added: </h3>
+                <div class="not-added">
+                    {% for fail in failed %}
+                        <div class="tab">
+                            <h3>{{fail['name']}}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div style="margin-top: 40px; margin-bottom: 40px;">All the songs were added.</div>
+    </div>
+
+{% endblock %}

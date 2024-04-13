@@ -1,0 +1,36 @@
+.results {
+    text-align: center;
+}
+.results img {
+    padding-top: 40px;
+    height: 200px;
+}
+.results .added {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.results h1, .results p {
+    margin: 0;
+}
+.results h3, .results h1 {
+    font-family: 'Montserrat';
+}
+.results li {
+    padding: 10px;
+    list-style: none;
+}
+.results li:nth-child(odd) {
+    background: #f3f3f3;
+}
+.results .tab {
+    text-align: left;
+    margin-bottom: 50px;
+}
+.results .tab ul {
+    padding: 0;
+}
+.results .tab h3 {
+    text-transform: capitalize;
+    display: inline;
+    border-bottom: 2px solid black;
+}
