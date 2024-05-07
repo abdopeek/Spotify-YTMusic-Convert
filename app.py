@@ -16,7 +16,7 @@ os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 TOKEN_INFO = "token_info"
 SCOPES = ['https://www.googleapis.com/auth/youtube', 'https://www.googleapis.com/auth/youtube.force-ssl', 
             'https://www.googleapis.com/auth/youtubepartner']
-CLIENT_SECRET_FILE = "client_secret_155375115919-huqqd2tcajha66iiadtl3v1n82c0hgi1.apps.googleusercontent.com.json"
+CLIENT_SECRET_FILE = 
 API_SERVICE_NAME = 'youtube'
 API_VERSION = "v3"
 
