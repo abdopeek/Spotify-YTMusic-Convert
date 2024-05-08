@@ -21,8 +21,8 @@ API_SERVICE_NAME = 'youtube'
 API_VERSION = "v3"
 
 
-app.secret_key = "DWN213moahr"
-app.config['SESSION_COOKIE_NAME'] = 'luh cookie'
+app.secret_key = ""
+app.config['SESSION_COOKIE_NAME'] = ''
 
 app.config["SESSION_PERMANENT"] = False
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -130,12 +130,6 @@ def convert():
         return redirect('/')
     elif 'credentials' not in session:
         return redirect('/googleLogin')
-    # if not authorized:
-    #     return redirect('/')
-    # elif 'credentials' not in session:
-    #     return redirect('/googleLogin')
-    # elif not id:
-    #     return redirect('/playlists')
     
     credentials = google.oauth2.credentials.Credentials(
         **session['credentials']
@@ -178,8 +172,8 @@ def get_token():
 
 def create_oauth():
     return SpotifyOAuth(
-        client_id="d375822b692049b1bd21207a48f1d256",
-        client_secret="2164e2c1c8414ef088cd5bba36082723",
+        client_id="",
+        client_secret="",
         redirect_uri=url_for('redirectPage', _external=True),
         scope='playlist-read-private playlist-read-collaborative'
     )
