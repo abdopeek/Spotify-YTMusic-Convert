@@ -2,9 +2,6 @@
 
 A web application that seamlessly converts your Spotify playlists into YouTube playlists.
 
-![Spotify to YouTube](https://img.shields.io/badge/Spotify-YouTube-brightgreen)
-![License](https://img.shields.io/github/license/abdopeek/Spotify-YTMusic-Convert)
-
 ## 🎵 Overview
 
 This tool allows users to convert their favorite Spotify playlists into YouTube playlists with just a few clicks. Perfect for when you want to enjoy your music on YouTube or share playlists with friends who don't use Spotify.
