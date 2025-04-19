@@ -26,8 +26,8 @@ This tool allows users to convert their favorite Spotify playlists into YouTube 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/spotify-to-youtube-converter.git
-   cd spotify-to-youtube-converter
+   git clone https://github.com/abdopeek/Spotify-YTMusic-Convert.git
+   cd Spotify-YTMusic-Convert
    ```
 
 2. Create a virtual environment and activate it:
